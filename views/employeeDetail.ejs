@@ -1,0 +1,55 @@
+<%-include('./partial/header.ejs') %>
+
+  <div class="container-fluid">
+    <h2 style="display: flex;justify-content: center;">Employee Deatails...</h2>
+    <br><br><br>
+    <table class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th>First_name</th>
+          <th>Last_name</th>
+          <th>Gender</th>
+          <th>Email</th>
+          <!--   <th>Password</th> -->
+          <th>Mobile_number</th>
+          <th>Action</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+           <tr>
+          <td>
+            <%= data.first_name%>
+          </td>
+          <td>
+            <%= data.last_name%>
+          </td>
+          <td>
+            <%=data.gender%>
+          </td>
+          <td>
+            <%=data.email%>
+          </td>
+          <!--  <td><%=data.password%></td> -->
+          <td>
+            <%=data.mobile_number%>
+          </td>
+          <td>
+            <form method='get' action='/edit/<%=data._id%>'>
+              <button type='submit'>Edit</button>
+
+            </form>
+          </td>
+          <td>
+            <form method='post' action='/delete/<%=data._id%>'>
+              <button type='submit'>Delete</button>
+
+            </form>
+          </td>
+        </tr>
+       </tbody>
+</table>
+
+</div>
+
+  <%-include('./partial/footer.ejs') %>

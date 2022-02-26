@@ -1,0 +1,40 @@
+<%-include('./partial/header.ejs') %> 
+  <div>
+    <h3 style="display:flex;justify-content: center;color:blue;">UPDATION FORM</h3><br><br>
+
+    <!-- <form method='post' action='/update'>
+      <div class="form-row">
+        <div class="col-7">
+          <input type="text" class="form-control" name='name' placeholder="name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" name='age' placeholder="age">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" name='fees' placeholder="fees">
+        </div>
+      </div>
+      <button type='submit'>Submit</button>
+    </form> -->
+
+
+    <form method="POST" action="/update/<%=data._id%>">
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" class="form-control" name="fname" placeholder="First Name *" value="" />
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="lname" placeholder="Last Name *" value="" />
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" placeholder="Your Email *" value="" />
+        </div>
+        <div class="form-group">
+          <input type="text" minlength="10" maxlength="10" name="Mnum" class="form-control" placeholder="Your Phone *"
+            value="" />
+        </div>
+        <button type='submit'>UPDATE</button>
+      </div>
+    </form>
+ </div>
+<%-include('./partial/footer.ejs') %>
